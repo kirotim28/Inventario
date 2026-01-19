@@ -1,70 +1,138 @@
-# Getting Started with Create React App
+# Sistema de Gestión de Activos e Inventario - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Interfaz de usuario moderna y responsive para el Sistema de Gestión de Activos e Inventario, desarrollada con React y Tailwind CSS.
 
-## Available Scripts
+## 🎨 Características
 
-In the project directory, you can run:
+### Componentes Principales
 
-### `npm start`
+1. **Sidebar de Navegación (Izquierda)**
+   - Dashboard
+   - Inventario (R6)
+   - Préstamos (R7)
+   - Reportar Falla (R14)
+   - Usuarios (R5)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Header Superior**
+   - Buscador Multicriterio (R11) - Input con icono de lupa
+   - Perfil de Usuario con opción "Cerrar sesión" (R3)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **KPIs (Indicadores)**
+   - Total Activos (Azul)
+   - Disponibles (Verde)
+   - En Mantenimiento (Amarillo)
+   - Dados de Baja (Rojo)
 
-### `npm test`
+4. **Tabla de Activos**
+   - Nombre del Activo
+   - Número de Serie
+   - Categoría
+   - Estado (con badges de colores)
+   - Ubicación
+   - Acciones (Dropdown con opciones)
+     - Editar perfil del activo
+     - Solicitar Préstamo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. **Modal de Reporte de Falla (R14)**
+   - Selección de Activo
+   - Descripción del Problema
+   - Nivel de Urgencia (Baja, Media, Alta, Crítica)
 
-### `npm run build`
+## 🎨 Diseño
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Paleta de Colores
+- **Fondo Principal**: `#f9fafb` (Gris muy claro)
+- **Tarjetas**: Blanco con sombras suaves
+- **KPI Verde**: Disponibles
+- **KPI Amarillo**: En Mantenimiento
+- **KPI Rojo**: Dados de Baja
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Tipografía
+- **Fuente**: Inter (Google Fonts)
+- **Alternativa**: Sans-serif estándar
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Iconografía
+- **Librería**: Lucide-React
+- Iconos modernos y consistentes en toda la interfaz
 
-### `npm run eject`
+## 🚀 Tecnologías
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React** v18 - Framework de JavaScript
+- **Tailwind CSS** v3 - Framework de CSS utilitario
+- **Lucide-React** - Librería de iconos
+- **Create React App** - Configuración inicial
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📦 Instalación
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# Instalar dependencias
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Iniciar servidor de desarrollo
+npm start
 
-## Learn More
+# Compilar para producción
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🌐 Scripts Disponibles
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `npm start` - Inicia el servidor de desarrollo en http://localhost:3000
+- `npm run build` - Crea la versión de producción optimizada
+- `npm test` - Ejecuta los tests
+- `npm run eject` - Expone la configuración (irreversible)
 
-### Code Splitting
+## 📱 Responsive Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+La interfaz es 100% responsive y se adapta a:
+- 📱 Dispositivos móviles (320px+)
+- 📱 Tablets (768px+)
+- 💻 Escritorio (1024px+)
+- 🖥️ Pantallas grandes (1920px+)
 
-### Analyzing the Bundle Size
+## 🔧 Estructura del Proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+frontend/
+├── public/
+│   ├── index.html          # HTML principal con Google Fonts
+│   └── ...
+├── src/
+│   ├── Dashboard.js        # Componente principal del dashboard
+│   ├── App.js             # Componente raíz
+│   ├── App.css            # Estilos globales
+│   ├── index.css          # Tailwind CSS y estilos base
+│   └── index.js           # Punto de entrada
+├── tailwind.config.js     # Configuración de Tailwind
+├── postcss.config.js      # Configuración de PostCSS
+└── package.json           # Dependencias y scripts
+```
 
-### Making a Progressive Web App
+## ✨ Características Implementadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- ✅ Layout con sidebar fijo y header superior
+- ✅ 4 tarjetas KPI con colores distintivos
+- ✅ Tabla de activos con datos de ejemplo
+- ✅ Badges de estado con colores semánticos
+- ✅ Dropdown de acciones por fila
+- ✅ Modal de reporte de falla con formulario completo
+- ✅ Buscador multicriterio en el header
+- ✅ Perfil de usuario con opción de logout
+- ✅ Diseño 100% responsive
+- ✅ Iconografía consistente (Lucide-React)
+- ✅ Fuente Inter de Google Fonts
 
-### Advanced Configuration
+## 🎯 Próximos Pasos (Backend Integration)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Para conectar con un backend real:
 
-### Deployment
+1. Reemplazar datos de ejemplo por llamadas API
+2. Implementar autenticación real
+3. Conectar el buscador con endpoints de búsqueda
+4. Implementar CRUD completo de activos
+5. Agregar gestión de préstamos
+6. Implementar sistema de reportes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📄 Licencia
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este proyecto es parte del Sistema de Gestión de Activos e Inventario.
